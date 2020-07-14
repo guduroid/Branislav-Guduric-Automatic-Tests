@@ -1,2 +1,2 @@
-# Branislav-Guduric-QH-Test
+# Branislav-Guduric-Automatic-Test
 Automatic Tests
