@@ -12,10 +12,7 @@ public class GetData
     public String boltSourceCode;
     public String boltDateAdded;
     public String boltWebSite;
-
     public String response;
-
-
 
     public void GetBoltDataFromAPI() {
         response = RestAssured.get(urlRetrieveBoltFromCoinMarket + apiKey)

@@ -1,4 +1,4 @@
-package org.technicaltest.webdriver;
+package org.technicaltest.tests;
 
 /*
 @author Branislav Guduric

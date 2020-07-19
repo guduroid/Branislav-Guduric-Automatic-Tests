@@ -1,20 +1,13 @@
-package org.technicaltest.webdriver;
+package org.technicaltest.tests;
 
-
-import io.restassured.RestAssured;
-import org.junit.Assert;
 import org.junit.Test;
-import org.technicaltest.APICalls.GetData;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class CoinMarketCapBackEndTest {
-
-    //############################################################
-
+public class CoinMarketCapBackEndTest
+{
     String urlRetrieveBoltFromCoinMarket = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?id=3843&CMC_PRO_API_KEY=";
     String apiKey = "b3a3cbd9-90bf-4a0c-8fb0-2ebe6833377e";
-
 
     /*
     public String boltSymbol;
@@ -22,8 +15,6 @@ public class CoinMarketCapBackEndTest {
     public String boltDateAdded;
     public String boltWebSite;
     public String boltLogoURL;
-
-
     public String response = GetBoltDataFromAPI();
 
     public String GetBoltDataFromAPI() {
@@ -42,10 +33,6 @@ public class CoinMarketCapBackEndTest {
     }
 
      */
-
-
-    //############################################################
-
 
     String expectedSymbol = "BOLT";
     String expectedSourceCode = "https://github.com/SyQic-Ops/bolt";
@@ -76,7 +63,6 @@ public class CoinMarketCapBackEndTest {
         //Assert.assertEquals(expectedSourceCode, boltSourceCode);
         when().get(urlRetrieveBoltFromCoinMarket + apiKey)
         .then().body("data.3843.urls.source_code[0]", equalTo(expectedSourceCode) );
-
     }
 
     @Test
@@ -93,7 +79,6 @@ public class CoinMarketCapBackEndTest {
         //Assert.assertEquals(expectedWebSite,boltWebSite);
         when().get(urlRetrieveBoltFromCoinMarket + apiKey)
         .then().body("data.3843.urls.website[0]", equalTo(expectedWebSite) );
-
     }
 
     @Test
