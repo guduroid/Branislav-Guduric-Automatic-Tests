@@ -52,10 +52,8 @@ public class CoinMarketCapFrontEndTest
     public void StartWebDriverTest_AddAndCheckItemsInWatchlist()
     {
         System.setProperty(webdriverChromeDriver,webdriverSystemAddress);
-
         WebDriver driver = new ChromeDriver();
         WebDriverWait wait = new WebDriverWait(driver,30);
-
         driver.manage().window().maximize();
         driver.navigate().to(coinMarketCapAddress);
 
