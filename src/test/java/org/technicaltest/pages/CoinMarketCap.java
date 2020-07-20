@@ -137,6 +137,14 @@ public class CoinMarketCap
         }
     }
 
+    public void SetPriceFilter()
+    {
+        OpenFiltersPanel();
+        ExpandPriceFilter();
+        InsertMinInPriceFilter();
+        ClickOnApplyFilterButton();
+    }
+
     public void ClickOnWatchlistButton()
     {
        driver.findElement(buttonWatchlist).click();

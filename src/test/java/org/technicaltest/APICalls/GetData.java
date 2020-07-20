@@ -1,5 +1,10 @@
 package org.technicaltest.APICalls;
 
+/*
+    This class should be used for retrieving of JSON with data for currencies.
+ */
+
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 

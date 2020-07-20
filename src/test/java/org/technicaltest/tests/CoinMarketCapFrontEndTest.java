@@ -60,6 +60,9 @@ public class CoinMarketCapFrontEndTest
         CoinMarketCap addAndCheckItemsInWatchlist = new CoinMarketCap(driver);
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(addAndCheckItemsInWatchlist.buttonShowFilters));
+        addAndCheckItemsInWatchlist.SetPriceFilter();
+
+        /*
         addAndCheckItemsInWatchlist.OpenFiltersPanel();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(addAndCheckItemsInWatchlist.buttonPriceFilter));
@@ -70,6 +73,8 @@ public class CoinMarketCapFrontEndTest
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(addAndCheckItemsInWatchlist.buttonApplyFilters));
         addAndCheckItemsInWatchlist.ClickOnApplyFilterButton();
+
+         */
 
         // I didn't know how to check when table is refreshed, so I used implicit wait.
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

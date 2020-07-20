@@ -1,5 +1,20 @@
 package org.technicaltest.tests;
 
+/*
+@author Branislav Guduric
+
+In this class are BackEnd automatic tests for website https://coinmarketcap.com/
+Testing include:
+    - Checking if there is error message
+    - Checking for correct symbol for Bolt currency
+    - Checking for source code for Bolt currency
+    - Checking for date added for Bolt currency
+    - Checking for website for Bolt currency
+    - Checking for valid URL for logo  for Bolt currency
+
+
+*/
+
 import org.junit.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;

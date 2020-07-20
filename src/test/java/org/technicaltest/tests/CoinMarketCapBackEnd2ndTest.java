@@ -29,7 +29,7 @@ public class CoinMarketCapBackEnd2ndTest {
     @Test
     public void CheckIDForDEM()
     {
-        when().get(urlRetrieveCurrencyWithSymbol + symbolDeutscheeMark + urlRetrieveCurrencyApiKeyString+ apiKey)
+        when().get(urlRetrieveCurrencyWithSymbol + symbolDeutscheeMark + urlRetrieveCurrencyApiKeyString + apiKey)
         .then().body("data[0].id", equalTo(expectedIdDEM) );
     }
 
