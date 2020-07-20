@@ -1,12 +1,15 @@
 package org.technicaltest.tests;
 
-import org.junit.Test;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.technicaltest.pages.CoinMarketCap;
+/*
+@author Branislav Guduric
 
+In this class are BackEnd automatic tests for website https://coinmarketcap.com/
+Testing include:
+    - Checking ID for DEM, BTC and ZER currencies
+    - Checking if converted values to USD are different than zero
+*/
+
+import org.junit.Test;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.*;
 
@@ -62,7 +65,7 @@ public class CoinMarketCapBackEnd2ndTest {
     public void ConvertBTCtoUSD()
     {
         when().get(urlRetrieveCurrencyWithIDForCoversion + expectedIdBTC + urlRetrieveCurrencyApiKeyAndAmountString + apiKey)
-                .then().body("data.quote.USD.price", not(0));
+        .then().body("data.quote.USD.price", not(0));
     }
 
     @Test
@@ -76,6 +79,6 @@ public class CoinMarketCapBackEnd2ndTest {
     public void ConvertZERtoUSD()
     {
         when().get(urlRetrieveCurrencyWithIDForCoversion + expectedIdZER + urlRetrieveCurrencyApiKeyAndAmountString + apiKey)
-                .then().body("data.quote.USD.price", not(0));
+        .then().body("data.quote.USD.price", not(0));
     }
 }

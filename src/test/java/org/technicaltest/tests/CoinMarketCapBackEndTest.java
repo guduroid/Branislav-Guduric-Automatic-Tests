@@ -11,8 +11,6 @@ Testing include:
     - Checking for date added for Bolt currency
     - Checking for website for Bolt currency
     - Checking for valid URL for logo  for Bolt currency
-
-
 */
 
 import org.junit.Test;
